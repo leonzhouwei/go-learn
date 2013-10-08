@@ -16,7 +16,7 @@ type T struct {
 	E E
 }
 
-func (t T) display() {
+func (t T) Display() {
 	fmt.Println(t)
 }
 
