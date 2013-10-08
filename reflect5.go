@@ -34,6 +34,9 @@ func main() {
 		m := s.Method(i)
 		fmt.Printf("%d: %s %s\n", i, typeOfT.Method(i).Name, m.Type())
 	}
+	fmt.Println("call Display() via reflect:")
+	m := s.MethodByName("Display")
+	m.Call(nil)
 	// modify the A filed of T via reflect
 	// fieldA := s.Field(0)
 	// fieldA.SetInt(204)
