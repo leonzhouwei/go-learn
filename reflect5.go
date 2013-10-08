@@ -32,7 +32,7 @@ func main() {
 	fmt.Println("methods:")
 	for i := 0; i < s.NumMethod(); i++ {
 		// m := s.Method(i)
-		fmt.Printf("%d: %s\n", i, typeOfT.Method(i).Name)
+		fmt.Printf("%d: %s %s\n", i, typeOfT.Method(i).Name, m.Type())
 	}
 	// modify the A filed of T via reflect
 	// fieldA := s.Field(0)
