@@ -9,6 +9,7 @@ import "strconv"
 import "time"
 
 import "algorithms/bubblesort"
+import "algorithms/qsort"
 
 var infile *string = flag.String("i", "infile", "File contains values for sorting")
 var outfile *string = flag.String("o", "outfile", "File to receive sorted values")
@@ -26,6 +27,7 @@ func main() {
         t1 := time.Now()
         switch *algorithm {
             case "qsort":
+                qsort.QuickSort(values)
             case "bubblesort":
                 bubblesort.BubbleSort(values)
             default:
